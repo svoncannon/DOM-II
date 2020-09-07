@@ -76,6 +76,7 @@ window.addEventListener("scroll", event => {
 body.addEventListener('keypress', event => {
     window.alert("You're so annoying.");
 });
+
 body.addEventListener('wheel', event => {
     inc++;
     if (inc === 1) {
@@ -84,6 +85,7 @@ body.addEventListener('wheel', event => {
         );
     }
 });
+
 allImages.forEach(atr => {
     atr.addEventListener('contextmenu',event => {
         window.alert(
@@ -107,18 +109,93 @@ logoHeading.addEventListener('click', event => {
     event.target.textContent = 'BRAAAAAINS!';
     event.stopPropagation();
 });
+
 logoHeading.addEventListener('mouseenter', event => {
     event.target.textContent = 'ZoMbIe BuS';
     zombieStyling();
     navAnchorsZombie();
     event.target.style.color = '#78C165';
 });
+
 logoHeading.addEventListener('mouseleave', event => {
     event.target.textContent = 'Fun Bus';
     defaultStyling();
 });
 // Nav Anchors
+let navAnchors = document.querySelectorAll('.nav-link');
 
+navAnchors[0].addEventListener('mouseenter', event => {
+    event.target.textContent = 'Streets';
+    event.target.style.color = '#78C165';
+    zombieStyling();
+    navAnchors.forEach(atr => {
+        if (atr != navAnchors[0]) {
+            atr.style.color = '#DE6C6B';
+        }
+    });
+});
+
+navAnchors[0].addEventListener('mouseleave', event => {
+    event.target.textContent = 'Home';
+    defaultStyling();
+});
+
+navAnchors[0].addEventListener('focus', event => {
+    event.target.textContent = 'Brains';
+});
+
+navAnchors[1].addEventListener('mouseenter', event => {
+    event.target.textContent = 'Undead';
+    event.target.style.color = '#78C165';
+    zombieStyling();
+    navAnchors.forEach(atr => {
+        if (atr 1= navAnchors[1]) {
+             atr.style.color = '#DE6C6B'
+        }
+    });
+});
+
+navAnchors[1].addEventListener('mouseleave', event => {
+    event.target.textContent = 'About Us';
+    defaultStyling();
+});
+
+navAnchors[2].addEventListener('mouseenter', event => {
+    event.target.textContent = 'Vlog';
+    event.target.style.color = '#78C165';
+    zombieStyling();
+    navAnchors.forEach(atr => {
+        if (atr != navAnchors[2]) {
+            atr.style.color = '#DE6C6B';
+        }
+    });
+});
+navAnchors[2].addEventListener('mouseleave', event => {
+    event.target.textContent = 'Blog';
+    defaultStyling();
+});
+
+navAnchors[3].addEventListener('mouseenter', event => {
+    event.target.textContent = "Terms and Conditions";
+    event.target.style.color = '#78C165';
+    zombieStyling();
+    navAnchors.forEach(atr => {
+        if (atr != navAnchors[3]) {
+            atr.style.color = '#DE6C6B';
+        }
+    });
+});
+navAnchors[3]addEventListener('mouseleave', event => {
+    event.target.textContent = 'Contact';
+    defaultStyling();
+});
+
+navAnchors.forEach(atr => {
+    atr.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+    });
+});
 /*===================== INTRO =============*/
 
 // Image
