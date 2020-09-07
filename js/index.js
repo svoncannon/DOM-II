@@ -242,11 +242,78 @@ introParagraph.addEventListener('mouseleave', event => {
 /*======= Top ========*/
 
 // h2
+let topHeading = document.querySelectorAll('.content-section h2');
+
+topHeading[0].addEventListener('mouseenter', event => {
+    event.target.textContent = 'Get Out!';
+    zombieStyling();
+    navAnchorsZombie();
+});
+topHeading[0].addEventListener('mouseleave', event => {
+    event.target.textContent = "Let's Go!";
+    defaultStyling();
+});
+topHeading[1].addEventListener('mouseenter', event => {
+    event.target.textContent = 'Murder Awaits if You Stay';
+    zombieStyling();
+    navAnchorsZombie();
+});
+topHeading[1].addEventListener('mouseleave', event => {
+    event.target.textContent = 'Adventure Awaits';
+    defaultStyling();
+});
 
 // Paragraphs
+let topParagraphs = document.querySelectorAll('.content-section p');
 
+topParagraphs.forEach(atr => {
+    if (atr === topParagraphs[0] || atr === topParagraphs[2]) {
+        atr.addEventListener('mouseenter', event => {
+            event.target.textContent = " Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve, imo evil braaiinns stalking monstra hypothalamus adventus resi hippocampus dentevil vultus brain comedat cerebella pitiutary gland viventium.";
+            zombieStyling();
+            navAnchorsZombie();
+        });
+        atr.addEventListener('mouseleave', event => {
+            event.target.textContent = "Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.";
+            defaultStyling();
+        });
+    }else {
+        atr.addEventListener('mouseenter', event => {
+            event.target.textContent = 'De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris.The medulla voodoo sacerdos locus coeruleus flesh eater, lateral geniculate nucleus suscitat mortuos braaaains comedere carnem superior colliculus virus';
+            zombieStyling();
+            navAnchorsZombie();
+        });
+        atr.addEventListener('mouseleave', event => {
+            event.target.textContent =  "Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.";
+            defaultStyling();
+        });
+    }
+});
 // Images
+let topImages = document.querySelectorAll('.img-content img');
 
+topImages[0].addEventListener('mouseenter', event => {
+    event.target.setAttribute('src', 'https://arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/ZAWPKQQGYZBPPLEVL5CVNUOGAY.jpg');
+    zombieStyling();
+    navAnchorsZombie();
+});
+topImages[0].addEventListener('mouseleave', event => {
+    event.target.setAttribute('src', 'https://fun-bus-travel-agency.netlify.app/img/adventure.jpg');
+    defaultStyling();
+});
+
+topImages[1].addEventListener('mouseenter', event => {
+    event.target.setAttribute('src', 'https://i.guim.co.uk/img/media/605964dd561b2c3ce53deca5d6e976a9fe58e0a6/0_225_3600_2159/master/3600.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=03d5c6f30ce16406b65357114a8dd577');
+    zombieStyling();
+    navAnchorsZombie();
+});
+topImages[1].addEventListener('mouseleave', event => {
+    event.target.setAttribute('src', 'https://fun-bus-travel-agency.netlify.app/img/fun.jpg');
+    defaultStyling();
+});
+topImages[1].addEventListener('dblclick', event => {
+    window.alert("You're silly!");
+});
 /*======== Middle =======*/
 
 // h2
