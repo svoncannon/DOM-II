@@ -50,7 +50,7 @@ function defaultStyling() {
     footerParagraph.style.removeProperty('background');
     footerParagraph.style.removeProperty('color');
 }
-// Event Listeners
+// PopUps
 
 window.addEventListener('load', event => {
     window.alert(
@@ -84,7 +84,13 @@ body.addEventListener('wheel', event => {
         );
     }
 });
-
+allImages.forEach(atr => {
+    atr.addEventListener('contextmenu',event => {
+        window.alert(
+            "Yesssssss. Save that photo. There's no malware hidden in it. Nope. None at all."
+        );
+    });
+});
 
 /*=================NAV=====================*/
 // Header
