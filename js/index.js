@@ -19,20 +19,20 @@ let footer = document.querySelector('footer');
 let inc = 0;
 // Functions
 function zombieStyling() {
-    event.target.style.color = ' #8A0303';
-    logoHeading.style.color = '#C89498';
-    navHeader.style.background = '#260703';
-    body.style.background = '#260703';
-    body.style.color = '#C89498';
-    footer.style.borderTop = '2px dashed #C89498';
-    footer.style.background = '#260703';
-    footerParagraph.style.background = '#260703';
-    footerParagraph.style.color = '#C89498';
+    event.target.style.color = '#78C165';
+    logoHeading.style.color = '#DE6C6B';
+    navHeader.style.background = '#64484F';
+    body.style.background = '#64484F';
+    body.style.color = '#DE6C6B';
+    footer.style.borderTop = '2px dashed #DE6C6B';
+    footer.style.background = '#64484F';
+    footerParagraph.style.background = '#64484F';
+    footerParagraph.style.color = '#DE6C6B';
 }
 
 function navAnchorsZombie() {
     navAnchorsZombie.forEach(atr => {
-        atr.style.color = '#C89498';
+        atr.style.color = '#DE6C6B';
     });
 }
 
@@ -94,9 +94,29 @@ allImages.forEach(atr => {
 
 /*=================NAV=====================*/
 // Header
+let navHeader = document.querySelector('.main-navigation');
+
+navHeader.addEventListener('click', event => {
+    event.target.style.background = '#EEDB80';
+});
 
 // Logo Heading
+let logoHeading = document.querySelector('.logo-heading');
 
+logoHeading.addEventListener('click', event => {
+    event.target.textContent = 'BRAAAAAINS!';
+    event.stopPropagation();
+});
+logoHeading.addEventListener('mouseenter', event => {
+    event.target.textContent = 'ZoMbIe BuS';
+    zombieStyling();
+    navAnchorsZombie();
+    event.target.style.color = '#78C165';
+});
+logoHeading.addEventListener('mouseleave', event => {
+    event.target.textContent = 'Fun Bus';
+    defaultStyling();
+});
 // Nav Anchors
 
 /*===================== INTRO =============*/
