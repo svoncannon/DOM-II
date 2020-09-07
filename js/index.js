@@ -99,7 +99,7 @@ allImages.forEach(atr => {
 let navHeader = document.querySelector('.main-navigation');
 
 navHeader.addEventListener('click', event => {
-    event.target.style.background = '#EEDB80';
+    event.target.style.background = '#A41E1F';
 });
 
 // Logo Heading
@@ -149,7 +149,7 @@ navAnchors[1].addEventListener('mouseenter', event => {
     event.target.style.color = '#78C165';
     zombieStyling();
     navAnchors.forEach(atr => {
-        if (atr 1= navAnchors[1]) {
+        if (atr != navAnchors[1]) {
              atr.style.color = '#DE6C6B'
         }
     });
@@ -185,7 +185,7 @@ navAnchors[3].addEventListener('mouseenter', event => {
         }
     });
 });
-navAnchors[3]addEventListener('mouseleave', event => {
+navAnchors[3].addEventListener('mouseleave', event => {
     event.target.textContent = 'Contact';
     defaultStyling();
 });
@@ -199,10 +199,43 @@ navAnchors.forEach(atr => {
 /*===================== INTRO =============*/
 
 // Image
+let bus = document.querySelector(".intro img");
+
+bus.addEventListener("mouseenter", event => {
+  event.target.setAttribute("src", "https://www.straight.com/files/v3/styles/gs_large/public/2015/01/shutterstock_221173951.jpg?itok=SbubDx5m");
+  zombieStyling();
+  navAnchorsZombie();
+});
+bus.addEventListener("mouseleave", event => {
+  event.target.setAttribute("src", 'https://fun-bus-travel-agency.netlify.app/img/fun-bus.jpg');
+  defaultStyling();
+});
+
 
 // h2
+let introHeading = document.querySelector('.intro h2');
 
+introHeading.addEventListener('mouseenter', event => {
+    event.target.textContent = 'You Are NOT Welcome Here!';
+    zombieStyling();
+    navAnchorsZombie();
+});
+introHeading.addEventListener('mouseleave', event => {
+    event.target.textContent = 'Welcome To Fun Bus!';
+    defaultStyling();
+});
 // Paragraph
+let introParagraph = document.querySelector('.intro p');
+
+introParagraph.addEventListener('mouseenter', event => {
+    event.target.textContent = 'Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. De carne cerebro lumbering animata cervello corpora quaeritis. Summus thalamus brains sit​​, morbo basal ganglia vel maleficia?';
+    zombieStyling();
+    navAnchorsZombie();
+});
+introParagraph.addEventListener('mouseleave', event => {
+    event.target.textContent = 'Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design, travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun traveler pretty design website expedition.';
+    defaultStyling();
+});
 
 /*============== MAIN CONTENT ===================*/
 
