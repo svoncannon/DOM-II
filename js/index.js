@@ -317,21 +317,121 @@ topImages[1].addEventListener('dblclick', event => {
 /*======== Middle =======*/
 
 // h2
+let destinationHeading = document.querySelector('.content-destination h2');
+
+destinationHeading.addEventListener('mouseenter', event => {
+    event.target.textContent = 'Leave Immediately!';
+    zombieStyling();
+    navAnchorsZombie();
+});
+destinationHeading.addEventListener('mouseleave', event => {
+    event.target.textContent = "Pick Your Destination";
+    defaultStyling();
+});
 
 // Paragraph
+let destinationParagraph = document.querySelector('.content-destination p');
 
+destinationParagraph.addEventListener('mouseenter', event => {
+    event.target.textContent = 'Zonbi cerebellum tattered for brein solum oculi cerveau eorum defunctis cerebro go lum cerebro. Nescio brains an Undead cervello zombies. Sicut thalamus malus putrid brains voodoo horror.';
+    zombieStyling();
+    navAnchorsZombie();
+});
+destinationParagraph.addEventListener('mouseleave', event => {
+    event.target.textContent = 'Expedition excursion design darn excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.';
+    defaultStyling();
+});
 // Image
+let destinationImage = document.querySelector('.content-destination img');
 
+destinationImage.addEventListener('mouseenter', event => {
+    event.target.setAttribute('src', 'https://boatific.com/wp-content/uploads/2018/10/1-z-1280x640.jpg');
+    zombieStyling();
+    navAnchorsZombie();
+});
+destinationImage.addEventListener('mouseleave', event => {
+    event.target.setAttribute('src', 'https://fun-bus-travel-agency.netlify.app/img/destination.jpg');
+    defaultStyling();
+});
 /*============ Bottom ===========*/
 
 // h4
+let pickHeadings = document.querySelectorAll('.content-pick h4');
+
+pickHeadings[0].addEventListener('mouseenter', event => {
+    event.target.textContent = 'I Will Look For You';
+    zombieStyling();
+    navAnchorsZombie();
+});
+pickHeadings[0].addEventListener('mouseleave', event => {
+    event.target.textContent = 'Fun In The Sun';
+    defaultStyling();
+});
+pickHeadings[1].addEventListener('mouseenter', event => {
+    event.target.textContent = 'I Will Find You';
+    zombieStyling();
+    navAnchorsZombie();
+});
+pickHeadings[1].addEventListener('mouseleave', event => {
+    event.target.textContent = 'Mountain Excursion';
+    defaultStyling();
+});
+pickHeadings[2].addEventListener('mouseeneter', event => {
+    event.target.textContent = 'And I Will Kill You';
+    zombieStyling();
+    navAnchorsZombie();
+});
+pickHeadings[2].addEventListener('mouseleave', event => {
+    event.target.textContent = 'Island Getaway';
+    defaultStyling();
+});
 
 // Paragraphs
+let pickParagraphs = document.querySelectorAll('.content-pick p');
 
+pickParagraphs.forEach(atr => {
+    atr.addEventListener('mouseenter', event =>{
+        event.target.textContent = 'Zonbi cerebellum tattered for brein solum oculi cerveau eorum defunctis cerebro go lum cerebro. Nescio brains an Undead cervello zombies. Sicut thalamus malus putrid brains voodoo horror.';
+        zombieStyling();
+        navAnchorsZombie();
+    });
+    atr.addEventListener('mouseleave', event => {
+        event.target.textContent = 'Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.';
+        defaultStyling();
+    });
+});
 // Buttons
+let pickButtons = document.querySelectorAll('.content-pick .btn');
 
+pickButtons.forEach(atr => {
+    atr.addEventListener('mouseenter', event => {
+        zombieStyling();
+        navAnchorsZombie();
+        event.target.style.color = '#DE6C6B';
+        event.target.style.background = '#78C165';
+        event.target.style.borderColor = '#DE6C6B';
+        event.target.textContent = 'Braaainns!!';
+    });
+
+    atr.addEventListener('mouseleave', event => {
+        defaultStyling();
+        event.target.style.removeProperty('background-color');
+        event.target.textContent = 'Sign Me Up!';
+    });
+});
 /*=========== Footer ==============*/
 
 // Paragraph
+let footerParagraph = document.querySelector('footer p');
 
+footerParagraph.addEventListener('mouseenter', event => {
+    event.target.textContent = 'Copyright Brains 0000';
+    zombieStyling();
+    navAnchorsZombie();
+    event.target.style.color = '#78C165';
+});
+footerParagraph.addEventListener('mouseleave', event => {
+    event.target.textContent = 'Copyright Fun Bus 2020';
+    defaultStyling();
+});
 
