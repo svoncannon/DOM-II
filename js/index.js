@@ -376,7 +376,7 @@ pickHeadings[1].addEventListener('mouseleave', event => {
     event.target.textContent = 'Mountain Excursion';
     defaultStyling();
 });
-pickHeadings[2].addEventListener('mouseeneter', event => {
+pickHeadings[2].addEventListener('mouseenter', event => {
     event.target.textContent = 'And I Will Kill You';
     zombieStyling();
     navAnchorsZombie();
